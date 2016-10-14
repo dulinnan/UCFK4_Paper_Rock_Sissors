@@ -60,14 +60,11 @@ tinygl.o: ../../utils/tinygl.c ../../drivers/avr/system.h ../../drivers/display.
 led.o: ../../drivers/led.c ../../drivers/avr/system.h ../../drivers/avr/pio.h ../../drivers/led.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
-display_symbol.o: display_symbol.c ../../drivers/avr/system.h ../../drivers/avr/pio.h ../../utils/pacer.h display_symbol.h
-	$(CC) -c $(CFLAGS) $< -o $@
-
 button.o: button.c button.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 # Link: create ELF output file from object files.
-game.out: game.o ir_uart.o pio.o prescale.o system.o timer.o timer0.o usart1.o display.o ledmat.o navswitch.o font.o pacer.o tinygl.o led.o button.o display_symbol.o
+game.out: game.o ir_uart.o pio.o prescale.o system.o timer.o timer0.o usart1.o display.o ledmat.o navswitch.o font.o pacer.o tinygl.o led.o button.o
 	$(CC) $(CFLAGS) $^ -o $@ -lm
 	$(SIZE) $@
 
