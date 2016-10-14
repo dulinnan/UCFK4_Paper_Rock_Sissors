@@ -22,15 +22,14 @@ A fun game programmed running on AVR ATmega32 micro-controller.
 3. Clone the our little game: It needs to be cloned into the assignment directory in the ucfk4 folder
 ```
  cd ence260-ucfk4/assignment
- git clone https://github.com/dulinnan/UCFK4_Paper_Rock_Sissors.git
- cd UCFK4_Paper_Rock_Sissors
+ git clone https://eng-git.canterbury.ac.nz/ence260-2016/team102.git
+ cd team102
 ```
 
 
 ## File Structure
   - `game.c`: Contains the main game task scheduling, logic and game phase tracking
-  - `button.c`, `button.h`: Contain all routines related to board manipulation, game opinion selection
-  - `display_symbol.c`, `display_symbol.h`: Contains display routines
+  - `button.c`, `button.h`: Contains all routines related to board manipulation, game opinion selection
   - `Makefile`: Contains the basic Makefile for game.c
 
 
